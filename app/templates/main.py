@@ -1,13 +1,13 @@
-import endpoints
+import endpoints as google_cloud_endpoints
 from ferris3.discovery import discover_api_services, discover_webapp2_routes
-from ferris3 import endpoints_apis
+from ferris3 import endpoints
 
 # APIs
 
-endpoints_apis.add('app/default-api.yaml', default=True)
+endpoints.add('app/default-api.yaml', default=True)
 
 API_CLASSES = discover_api_services()
-API_APPLICATION = endpoints.api_server(API_CLASSES)
+API_APPLICATION = google_cloud_endpoints.api_server(API_CLASSES)
 
 
 # WSGI handlers
