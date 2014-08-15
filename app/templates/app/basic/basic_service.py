@@ -7,7 +7,7 @@ class BasicMessage(messages.Message):
 
 
 @auto_class
-class BasicApi(Service):
+class BasicService(Service):
 
     @auto_method(returns=BasicMessage)
     def get(self, request):
