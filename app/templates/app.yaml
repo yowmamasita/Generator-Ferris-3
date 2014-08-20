@@ -5,6 +5,9 @@ threadsafe: true
 api_version: 1
 module: api
 
+builtins:
+- deferred: on
+
 handlers:
 # Endpoints handler
 - url: /_ah/spi/.*
