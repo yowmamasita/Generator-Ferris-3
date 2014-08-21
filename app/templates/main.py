@@ -4,7 +4,7 @@ from ferris3 import endpoints
 
 # APIs
 
-endpoints.add('app/default-api.yaml', default=True)
+endpoints.add('app/default-endpoint.yaml', default=True)
 
 API_CLASSES = discover_api_services()
 API_APPLICATION = google_cloud_endpoints.api_server(API_CLASSES)

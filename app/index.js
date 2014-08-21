@@ -33,8 +33,8 @@ var Ferris3Generator = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.someOption = props.someOption;
-      this.app_id = props.app_id;
-      this.oauth2_client_id = props.oauth2_client_id;
+      this.app_id = props.app_id || 'ferris-app';
+      this.oauth2_client_id = props.oauth2_client_id || 'unspecified';
 
       done();
     }.bind(this));
@@ -43,7 +43,7 @@ var Ferris3Generator = yeoman.generators.Base.extend({
   app: function () {
     this.mkdir('app');
     this.directory('app');
-    this.template('app/default-api.yaml');
+    this.template('app/default-endpoint.yaml');
     this.template('app.yaml');
     this.copy('requirements.txt');
     this.copy('main.py');
