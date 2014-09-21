@@ -11,7 +11,7 @@ var Ferris3Generator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
 
     this.on('end', function () {
-      this.spawnCommand('gaelic', ['--pre']);
+      this.spawnCommand('pip', ['install', '--pre', '-t', 'lib', '-r', 'requirements.txt']);
     });
   },
 
@@ -46,6 +46,8 @@ var Ferris3Generator = yeoman.generators.Base.extend({
     this.template('app/default-endpoint.yaml');
     this.template('app.yaml');
     this.copy('requirements.txt');
+    this.copy('appengine_config.py');
+    this.copy('vendor.py');
     this.copy('main.py');
   }
 });
