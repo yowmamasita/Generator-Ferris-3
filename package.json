@@ -4,10 +4,10 @@
   "description": "Generator for Ferris3 projects",
   "license": "Apache, Version 2.0",
   "main": "app/index.js",
-  "repository": "jonparrott/generator-ferris3",
+  "repository": "jonparrott/Generator-Ferris-3",
   "author": {
     "name": "Jonathan Wayne Parrott",
-    "email": "jon@jonparrott.com",
+    "email": "jon.wayne.parrott@gmail.com",
     "url": "https://github.com/jonparrott"
   },
   "engines": {
