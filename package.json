@@ -1,8 +1,8 @@
 {
   "name": "generator-ferris3",
-  "version": "0.0.1",
-  "description": "Yeoman generator",
-  "license": "MIT",
+  "version": "0.0.2",
+  "description": "Generator for Ferris3 projects",
+  "license": "Apache, Version 2.0",
   "main": "app/index.js",
   "repository": "jonparrott/generator-ferris3",
   "author": {
