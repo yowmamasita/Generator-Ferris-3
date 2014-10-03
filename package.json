@@ -1,6 +1,6 @@
 {
   "name": "generator-ferris3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generator for Ferris3 projects",
   "license": "Apache, Version 2.0",
   "main": "app/index.js",
