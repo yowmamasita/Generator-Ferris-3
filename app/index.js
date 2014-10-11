@@ -47,6 +47,7 @@ var Ferris3Generator = yeoman.generators.Base.extend({
     this.template('app.yaml');
     this.copy('requirements.txt');
     this.copy('appengine_config.py');
+    this.copy('endpoints_config.py');
     this.copy('vendor.py');
     this.copy('main.py');
   }
