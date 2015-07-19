@@ -50,6 +50,7 @@ var Ferris3Generator = yeoman.generators.Base.extend({
     this.copy('endpoints_config.py');
     this.copy('vendor.py');
     this.copy('main.py');
+    this.copy('.gitignore');
   }
 });
 
