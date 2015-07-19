@@ -1,36 +1,31 @@
 /*global describe, beforeEach, it */
 'use strict';
 var path = require('path');
+var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 
 describe('ferris3 generator', function () {
-  beforeEach(function (done) {
-    helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
-      if (err) {
-        return done(err);
-      }
-
-      this.app = helpers.createGenerator('ferris3:app', [
-        '../../app'
-      ]);
-      done();
-    }.bind(this));
+  before(function (done) {
+      helpers.run(path.join(__dirname, '../app'))
+       .withOptions({ skipInstall: true })
+       .withPrompts({ someOption: true })
+       .on('end', done);
   });
 
-  it('creates expected files', function (done) {
-    var expected = [
-      // add files you expect to exist here.
-      '.jshintrc',
-      '.editorconfig'
-    ];
-
-    helpers.mockPrompt(this.app, {
-      'someOption': true
-    });
-    this.app.options['skip-install'] = true;
-    this.app.run({}, function () {
-      helpers.assertFile(expected);
-      done();
-    });
+  it('creates expected files', function () {
+      assert.file([
+        'app/__init__.py',
+        'app/settings.py',
+        'app/default-endpoint.yaml',
+        'app/basic/basic_handler.py',
+        'app/basic/__init__.py',
+        'main.py',
+        'vendor.py',
+        'appengine_config.py',
+        'endpoints_config.py',
+        'app.yaml',
+        'requirements.txt',
+        '.gitignore'
+      ]);
   });
 });

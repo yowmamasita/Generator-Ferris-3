@@ -2,7 +2,7 @@
   "name": "generator-ferris3",
   "version": "0.0.4",
   "description": "Generator for Ferris3 projects",
-  "license": "Apache, Version 2.0",
+  "license": "Apache-2.0",
   "main": "app/index.js",
   "repository": "jonparrott/Generator-Ferris-3",
   "author": {
@@ -23,7 +23,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
+    "yeoman-generator": "^0.20.2",
     "chalk": "~0.4.0",
     "yosay": "^0.1.0"
   },
